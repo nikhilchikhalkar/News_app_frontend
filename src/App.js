@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 import News from './Components/News';
 import Navbar from './Components/Navbar';
+import PageNotFound from './Components/PageNotFound';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Route path='/science' element={<News category="science"/>}/>
       <Route path='/sports' element={<News category="sports"/>}/>
       <Route path='/technology' element={<News category="technology"/>}/>
+      <Route path='*' element={<PageNotFound/>}/>
     </Routes>
     </BrowserRouter>
    </div>
